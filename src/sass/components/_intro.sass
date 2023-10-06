@@ -1,0 +1,17 @@
+.intro
+    grid-column: center-start / center-end
+    display: grid
+    text-align: center
+    grid-template-rows: 2fr 1.2fr 1fr
+    @include respond($breakpoint: tab-port)
+        grid-template-rows: min-content 1.2fr 0.8fr
+        .breadCrumbs
+            margin-bottom: 4rem
+    @include respond($breakpoint: phone)
+        .title-h3
+            margin-bottom: 1rem
+    &__logo
+        text-align: left
+        padding: 4rem 8rem
+        @include respond($breakpoint: tab-port)
+            padding: 2rem 4rem

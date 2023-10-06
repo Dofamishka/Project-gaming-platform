@@ -1,0 +1,24 @@
+.breadCrumbs
+    display: flex
+    @include respond($breakpoint: tab-port)
+        max-width: 20rem
+        margin: 0 auto
+
+    &__item
+        margin-right: 1rem
+    &__link
+        color: $color-white
+        display: inline-block
+        transition: 0.4s
+        &:hover
+            transform: scale(1.2)
+            text-shadow: $shadow-text-violete
+        &:active
+            color: $color-gray
+        &-active 
+            color: $color-orange-light
+            &:hover
+                transform: none
+                text-shadow: none
+    
+    

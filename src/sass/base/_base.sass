@@ -1,0 +1,17 @@
+@import "../abstracts/_mixins"
+@import "../abstracts/_variable"
+html
+    font-size: 62.5%
+    @include respond($breakpoint: big-screen)
+        font-size: 70%
+    @include respond($breakpoint: tab-land)
+        font-size: 48%
+    @include respond($breakpoint: phone)
+        font-size: 43%
+
+body
+    @include text (1.6rem, 400, 187.5%)
+    font-family: "Poppins"
+    color: $color-white
+    background: $color-dark
+

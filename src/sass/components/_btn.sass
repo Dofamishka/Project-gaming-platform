@@ -1,0 +1,60 @@
+@import "../abstracts/_variable"
+.btn
+    font-weight: 500
+    background: $gradient-orange
+    padding: 1rem 2rem
+    border-radius: 4rem
+    cursor: pointer
+    color: $color-white
+    transition: all 0.2s
+    display: inline-block
+    backface-visibility: hidden
+    &:hover
+        transform: translateY(-0.5rem)
+        box-shadow: 0px 0px 5.9rem 2rem rgba(220, 112, 0, 0.2)
+    &:active
+        transform: translateY(-0.2rem) scale(0.9)
+    @include respond($breakpoint: tab-port)
+        padding: 2.5rem 3.5rem
+    &-header
+        grid-area: 5 / 1 / 6 / -1
+        align-self: start 
+        justify-self: start
+        @include respond($breakpoint: tab-land)
+            margin-top: 1.5rem
+        @include respond($breakpoint: tab-port)
+            justify-self: center
+    &-border
+        backface-visibility: hidden
+        box-shadow: 0px 0px 4rem 1rem rgba(60, 60, 60, 0.2)
+        
+        &:hover
+            background: $color-white
+            color: $color-orange-light
+            outline: 0.4rem solid $color-orange-light
+            outline-offset: 0.5rem
+        &:active
+            outline: none
+            @include respond($breakpoint: tab-port)
+                padding: 2.1rem 3.1rem
+    .icon-arrow
+        display: inline-block
+        font-size: 1.2rem
+        transform: translateY(-0.05rem)
+        padding-left: 1rem
+    &-square 
+        border-radius: 0rem
+        text-align: center
+        &:hover
+            box-shadow: 0px 0px 0px 0.2rem $color-white inset
+    &-shadow
+        background: $color-orange-dark
+        border-radius: 0.8rem
+        &:hover
+            background: $color-white
+            color: $color-orange-light
+            box-shadow: $shadow-inner-orange
+        &:active
+            transform: scale(0.8)
+    &-long 
+        padding: 1.3rem 5rem

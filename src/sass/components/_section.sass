@@ -1,0 +1,99 @@
+.section
+    &__header-main
+        padding: 4rem 8rem
+        @include respond($breakpoint: phone)
+            padding: 4rem 4rem
+    &__header-team
+        @include respond($breakpoint: tab-port)
+            padding: 5rem 0rem
+        &-wide
+            margin: 4rem 0
+            @include respond($breakpoint: tab-port)
+                padding: 0
+                margin: 0
+    &__header-wide
+        padding: 4rem 0rem 4rem 8rem
+        @include respond($breakpoint: tab-port)
+            padding: 4rem 2rem
+            margin-bottom: 4rem
+
+    &-intro
+        padding: 8rem 0
+    &-intro__news
+        padding-top: 8rem
+        @include respond($breakpoint: phone)
+            padding-top: 10rem
+    &-features
+        padding: 15rem 0 18rem 0
+        @include respond($breakpoint: tab-port)
+            padding: 13rem 0 13rem 0
+    &-banner
+        margin-bottom: 3rem
+        &-group
+            padding: 8rem 0
+            height: 100%
+            @include respond($breakpoint: tab-port)
+                padding: 0 
+        &-video 
+            padding: 4rem 0
+        &-text 
+            padding: 0 8vw
+            @include respond($breakpoint: tab-land)
+                padding: 0 2vw 0 3vw
+            @include respond($breakpoint: tab-port)
+                padding: 4rem 5vw 6rem 5vw
+            &-oneImg
+                padding-right: 11vw
+                @include respond($breakpoint: tab-land)
+                    padding-right: 6vw
+                @include respond($breakpoint: tab-port)
+                    padding: 4vw 8vw
+                    margin-bottom: 0
+            &-video 
+                padding-right: 12rem
+                @include respond($breakpoint: tab-land)
+                    padding-right: 5vw
+                @include respond($breakpoint: tab-port)
+                    padding: 0 10vw 10rem 10vw
+            &-left
+                padding-left: 11vw
+                @include respond($breakpoint: tab-port)
+                    padding-left: 0
+                    padding-bottom: 7rem
+            &-right
+                padding-right: 11vw
+                @include respond($breakpoint: tab-port)
+                    padding-right: 0
+                    padding-bottom: 7rem
+
+    &-cards
+        padding: 18rem 0 15rem 0
+        @include respond($breakpoint: tab-port)
+            padding: 13rem 0 13rem 0
+    &-workWithUs
+        padding: 12rem 0
+    &-happyCustomers
+        padding: 13rem 0
+        @include respond($breakpoint: phone)
+            padding: 13rem 4rem
+    &-gallery
+        margin: 10rem 1.5rem
+        @include respond($breakpoint: phone)
+            margin: 8rem 1.5rem
+    &-article
+        padding: 0 8rem 0 8vw
+        @include respond($breakpoint: phone)
+            padding: 0
+    &-preview
+        padding: 8rem 8rem 8rem 0
+        @include respond($breakpoint: tab-port)
+            padding: 8rem 0
+
+    &-map 
+        margin: 4rem 0
+    &-footer 
+        padding: 9rem
+    &-form
+        margin: 5rem 0
+    &-form-contact
+        padding: 5.5rem 5rem

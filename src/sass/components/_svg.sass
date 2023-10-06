@@ -1,0 +1,27 @@
+.svg
+    width: 2rem
+    height: 2rem
+    &-big
+        width: 1.3rem
+        height: 1.3rem
+        @include respond($breakpoint: tab-port)
+            width: 2rem
+            height: 2rem
+    &-box 
+        border-radius: 50%
+        display: flex
+        height: 3rem
+        width: 3rem
+        align-items: center
+        justify-content: center
+        margin-right: 1rem
+        &-small
+            height: 2rem
+            width: 2rem
+        &-big 
+            height: 3.4rem
+            width: 3.4rem
+        &-white
+            background: $color-white
+    
+

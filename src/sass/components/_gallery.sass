@@ -1,0 +1,64 @@
+.gallery
+    background: $color-dark
+    grid-column: full-start / full-end
+    display: grid
+    grid-template: repeat(7, 5vw) / repeat(8, 1fr)
+    grid-gap: 1.5rem
+    @include respond($breakpoint: phone)
+        grid-template: repeat(7, 1fr) / repeat(8, 1fr)
+    &:hover &__item:not(:hover)
+        filter: brightness(50%)
+    &__item:nth-child(n+5)
+        @include respond($breakpoint: phone)
+            display: none
+    &__item-1
+        grid-area: 1 / 1 / 3 / 3
+        @include respond($breakpoint: phone)
+            grid-area: 5 / 6 / -1 / -1
+        
+    &__item-2
+        grid-area: 1 / 3 / 4 / 6
+        @include respond($breakpoint: phone)
+            grid-area: 1 / 1 / 5 / 5
+    &__item-3
+        grid-area: 1 / 6 / 3 / 7
+        @include respond($breakpoint: phone)
+            grid-area: 5 / 1 / -1 / 6
+    &__item-4
+        grid-area: 1 / 7 / 3 / 9
+        @include respond($breakpoint: phone)
+            grid-area: 1 / 5 / 5 / -1
+    &__item-5
+        grid-area: 3 / 1 / 6 / 3
+    &__item-6
+        grid-area: 4 / 3 / 6 / 5
+    &__item-7
+        grid-area: 4 / 5 / 5 / 6
+    &__item-8
+        grid-area: 3 / 6 / 5 / 8
+    &__item-9
+        grid-area: 3 / 8 / 6 / 9
+    &__item-10
+        grid-area: 6 / 1 / -1 / 2
+    &__item-11
+        grid-area: 6 / 2 / -1 / 4
+    &__item-12
+        grid-area: 6 / 4 / -1 / 5
+    &__item-13
+        grid-area: 5 / 5 / -1 / 8
+    &__item-14
+        grid-area: 6 / 8 / -1 / 9
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        transition: 0.5s all
+        &:hover
+            transform: scale(1.15)
+            box-shadow: $shadow-violete
+            z-index: 7
+            position: relative
+            @include respond($breakpoint: phone)
+                transform: scale(1.1)
+    @include respond($breakpoint: tab-port)
+        padding: 0 1.5rem

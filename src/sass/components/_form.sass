@@ -1,0 +1,125 @@
+.form
+    grid-column: center-start / center-end
+    display: grid
+    grid-template-columns: repeat(8, 1fr)
+    grid-template-rows: 0.7fr 1.2fr 2fr
+    @include respond($breakpoint: phone)
+        grid-template-rows: 0.4fr 0.7fr 2fr
+        text-align: center
+    &__title-h3
+        grid-column: 1 / -1
+    &__p
+        grid-column: 1 / 5
+        @include respond($breakpoint: phone)
+            grid-column: 1 / -1
+    &__item
+        grid-column: 1 / -1
+        background: $color-brown-light
+        border-radius: 1.5rem
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr))
+        grid-gap: 2rem 4rem
+        align-items: center
+        align-content: space-between
+        @include respond($breakpoint: phone)
+            text-align: center
+            justify-items: center
+            gap: 6rem 4rem
+        &-p 
+            max-width: 50rem
+    &__content
+        grid-column: span 3
+        @include respond($breakpoint: tab-port)
+            grid-column: span 2
+        @include respond($breakpoint: phone)
+            grid-column: 1 / -1
+    &__wrapperInput
+        grid-column: span 2
+        display: flex
+        padding: 1rem 1rem 1rem 2rem
+        background: $color-white
+        border-radius: 0.8rem
+        max-height: 7rem
+        justify-content: space-between
+        align-items: center
+        @include respond($breakpoint: tab-port)
+            grid-column: span 3
+        @include respond($breakpoint: phone)
+            grid-column: 1 / -1
+    &__input
+        color: $color-gray-transparent
+        max-width: 20rem
+    &__label
+        opacity: 0
+    &__button
+        padding: 1rem 1.5rem
+        transition: .4s all
+    &-contact
+        margin: 0 auto
+        display: grid
+        max-width: 70rem
+        grid-template-columns: repeat(2, 1fr)
+        gap: 2rem 3rem
+        @include respond($breakpoint: phone)
+            grid-template-columns: 1fr
+            gap: 4rem 0
+        
+        &__label
+            color: $color-white-transparent
+        &__input
+            background: $color-white-transparent
+            border-radius: 0.9rem
+            border: 0.05rem solid $color-gray
+            min-height: 4rem
+            padding: 2rem
+            z-index: 3
+            &_message
+                min-height: 23rem
+        &__item
+            display: grid
+            grid-template-rows: repeat(2, min-content)
+            gap: 1rem 0
+            &_email
+                grid-column: 1 / -1
+            &_message
+                grid-column: 1 / -1
+
+        &__btn
+            grid-column: 2 / -1
+            justify-self: end
+            padding: 1.5rem 3rem
+            z-index: 3
+            @include respond($breakpoint: phone)
+                grid-column: 1 / -1
+        &__box
+            grid-column: full-start / full-end
+            background: $color-brown-light
+            position: relative
+            z-index: 2
+            overflow: hidden
+            
+    &-line__svg-big
+        position: absolute
+        z-index: 1
+        width: 115vw
+        height: 20vw
+        right: -25%
+        top: 0
+        stroke: $color-orange-light
+        stroke-opacity: 0.24
+        fill: none
+    &-line__svg-small
+        position: absolute
+        z-index: 1
+        width: 115vw
+        height: 20vw
+        left: -50%
+        bottom: 0
+        stroke: $color-white
+        stroke-opacity: 0.24
+        fill: none
+        
+            
+    
+
+

@@ -1,0 +1,58 @@
+.preview
+    grid-column: 7 / full-end
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    @include respond($breakpoint: tab-land)
+        grid-column: 6 / full-end
+    @include respond($breakpoint: tab-port)
+        grid-column: center-start / center-end
+        display: grid
+        justify-items: center
+        grid-template-columns: repeat(auto-fit, minmax(54rem, 1fr))
+        gap: 4rem 5rem
+    @include respond($breakpoint: phone)
+        grid-template-columns: 1fr
+    &__item
+        display: grid
+        grid-template-columns: 13vw 1fr
+        grid-template-rows: repeat(2, min-content)
+        align-items: center
+        justify-items: start
+        gap: 2.5rem 4rem
+        transition: 0.5s
+        border-radius: 2rem
+        @include respond($breakpoint: tab-land)
+            grid-template-columns: 15vw 1fr
+        @include respond($breakpoint: tab-port)
+            background: $color-brown-light
+            padding: 2rem 
+        @include respond($breakpoint: phone)
+            grid-template-columns: 1fr
+            justify-items: center
+            text-align: center
+            padding: 4rem 2rem 
+            gap: 4rem
+            width: 100%
+        &:hover
+            transform: scale(1.1)
+            background: $color-brown-light
+    &__img
+        border-radius: 2rem
+        grid-row: 1 / -1
+        max-height: 25vw
+        @include respond($breakpoint: phone)
+            max-height: 30vw
+    &__title
+        max-width: 38rem
+        @include respond($breakpoint: tab-land)
+            max-width: 44rem
+        @include respond($breakpoint: tab-port)
+            max-width: 100%
+        @include respond($breakpoint: phone)
+            max-width: 44rem
+    &__content
+        &:nth-child(even)
+            align-self: end
+        &:nth-child(odd)
+            align-self: start

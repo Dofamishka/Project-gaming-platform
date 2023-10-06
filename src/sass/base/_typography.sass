@@ -1,0 +1,20 @@
+@import "../abstracts/_mixins"
+.title-h1
+    @include text($f-size: 5rem, $f-weight: 700, $l-height: 155.2%)
+.title-h2
+    @include text($f-size: 3.8rem, $f-weight: 600, $l-height: 187.5%)
+.title-h3
+    @include text($f-size: 3rem, $f-weight: 700, $l-height: 187.5%)
+.title-h4
+    @include text($f-size: 2.3rem, $f-weight: 600, $l-height: 155.5%)
+    &-orange 
+        color: $color-orange-dark
+    &-light
+        font-weight: 300
+.title-logo
+    @include text (2.4rem, 800, 153.5%)
+    text-transform: uppercase
+.text-center
+    text-align: center
+    
+    

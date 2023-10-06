@@ -1,0 +1,23 @@
+.features
+    background: $gradient-brown-circle
+    grid-column: center-start / center-end
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+    grid-gap: 7rem 4rem
+    align-items: start
+.feature
+    display: grid
+    grid-template-columns: min-content 1fr
+    grid-gap: 1.5rem 2.4rem
+    transition: 0.4s all
+    &:hover
+        transform: scale(1.2)
+        background: $gradient-brown-transparent
+    &__icon
+        width: 6.5rem
+        height: 6.5rem
+        grid-row: 1 / span 2
+        transform: translateY(-1.5rem)
+
+        
+    
